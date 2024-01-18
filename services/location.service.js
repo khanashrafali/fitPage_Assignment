@@ -65,7 +65,7 @@ const updateLocation = async (locationId, body) => {
       let coords = [+body.lng, +body.lat];
       body.loc = { type: "Point", coordinates: coords };
     }
-    await location.set(...body).save();
+    await location.set({ ...body }).save();
   } catch (error) {
     throw error;
   }

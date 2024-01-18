@@ -25,7 +25,7 @@ app.use(errorController.errorHandler);
 // create connection to mongodb
 DB.then((rs) => {
   console.log("DB is connected.");
-  app.listen(process.env.PORT, async () => {
+  app.listen(PORT, async () => {
     console.log(`server started on port ${process.env.PORT}`);
   });
 }).catch((err) => console.log(JSON.stringify(err)));
